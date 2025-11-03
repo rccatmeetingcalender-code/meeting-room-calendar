@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>会议室日历展示</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    iframe {
+      width: 100%;
+      height: 100vh;
+      border: none;
+    }
+  </style>
+  <!-- 引入 config.js 文件 -->
+  config.js</script>
+</head>
+<body>
+  <script>
+    // 使用 config.js 中定义的 calendarUrl
+    const embedUrl = `https://open-web-calendar.hosted.quelltext.eu/index.html?calendar=${encodeURIComponent(calendarUrl)}&language=zh`;
+
+    const iframe = document.createElement("iframe");
+    iframe.src = embedUrl;
+    document.body.appendChild(iframe);
+  </script>
+</body>
+</html>
