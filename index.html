@@ -3,47 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <title>会议室日历展示</title>
+  
   <style>
-    body {
+    html, body {
       margin: 0;
       padding: 0;
+      height: 100%;
+      width: 100%;
     }
     iframe {
-      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
       height: 100vh;
       border: none;
-    }   
-    .error {
-      text-align: center;
-      color: red;
-      margin-top: 50px;
-      font-size: 20px;
     }
-
   </style>
-  <!-- 正确引入 config.js 文件 -->
-  <script src="config.js"></script>
+
 </head>
 <body>
-  <script>
-    
-    if (typeof calendarUrl === "undefined") {
-      document.body.innerHTML = "<div class='error'>Error: config.js not loaded or calendarUrl missing</div>";
-    } else {
+  <iframe>
+    src="
+    https://open-web-calendar.hosted.quelltext.eu/calendar.html?url=fernet%3A%2F%2FgAAAAABpCLfnqZ1foT5ePEFLQtbVOvtDocpf6s_uQObUUBuEKQOMQUyIQKNnRuO6dXfo_mVneB-G7ZQ-_5yfn9NCx28clV33JROunEeVL88psGgFVCv9mwttgXuh3fjfe3x24LXhw0ykIp9Wi9ZqNL--OdL7028NtaXOeChcue2SHozsw-WZYAvgJPBQsvhWobHBlJtcDQJRmz6ZpUjwvVbh2ux_XSYx8JQ5CiMyP4tzUWBYxsBRWcwR_Dyc7Xpc2u91ffoQLpuw2Eeryb2LnB-T744L0hHGj4xlt5XcEoS-gOCd6i0dkZATlk9gi_4ibqYc_o4mZ_cePuiZZLlFweMHuRuPpCDsPlruypI57YOhF3my94Zz5rTaREJK4IlushRw-D9I9jcxp2ib7_kMLdrQowYIvsc-3g%3D%3D"
+</iframe>
 
-    // 使用 config.js 中定义的 calendarUrl
-    const embedUrl = `https://open-web-calendar.hosted.quelltext.eu/calendar.html?calendar=${encodeURIComponent(calendarUrl)}&language=zh`;
-    
-    console.log("Embed URL:", embedUrl);
-
-    const iframe = document.createElement("iframe");
-      
-    iframe.src = embedUrl;
-    document.body.appendChild(iframe);
-    }
-  </script>
 </body>
+
 </html>
+
 
 
 
