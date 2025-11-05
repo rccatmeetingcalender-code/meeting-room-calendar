@@ -23,13 +23,26 @@
 
 </head>
 <body>
-  <iframe 
+  <iframe id = "calendarFrame"
     src="https://open-web-calendar.hosted.quelltext.eu/calendar.html?url=fernet%3A%2F%2FgAAAAABpCW5kiyD1v4jyNHFdF6WktHc-58u3ovp1dAyivp32mF2_-FHK3Ip9RA7Wu2GuClFC1P8c4tF-Q-xZ1BT4qa93AsQI3BCQq-XIasB7HLOLVEejs_Qoh5AqJ_1mRWJY9v6vAKLsKqW-upUWnzGl_DoEzsjFzD-qUeJXs9tHeTW7DbBPfaWjtvwBzH1cjXEUcEGH0ydDZ0w4Ci_OhJASeZ7VpGBcL-yaiaOyo8wR9utUeEaccXUqhJHnTY3P7LnbayErbhWaFe80ojtG--9shZUF0pCVZml46lztOdVTkyxcidY-t3Dq6KqEmqqxqbplP_XC7myySJCVge4_U94pMSZQIlLZXucuaxpFlX0Bm7vQQxpy5sZkeFPGvR9pR7HVFL5oILy5FQv_zCGMmDujuBbyWzi7sQ%3D%3D"   
   </iframe>
+
     
+  <script>
+    const iframe = document.getElementById('calendarFrame');
+    const baseUrl = "https://open-web-calendar.hosted.quelltext.eu/calendar.html?url=fernet%3A%2F%2FgAAAAABpCW5kiyD1v4jyNHFdF6WktHc-58u3ovp1dAyivp32mF2_-FHK3Ip9RA7Wu2GuClFC1P8c4tF-Q-xZ1BT4qa93AsQI3BCQq-XIasB7HLOLVEejs_Qoh5AqJ_1mRWJY9v6vAKLsKqW-upUWnzGl_DoEzsjFzD-qUeJXs9tHeTW7DbBPfaWjtvwBzH1cjXEUcEGH0ydDZ0w4Ci_OhJASeZ7VpGBcL-yaiaOyo8wR9utUeEaccXUqhJHnTY3P7LnbayErbhWaFe80ojtG--9shZUF0pCVZml46lztOdVTkyxcidY-t3Dq6KqEmqqxqbplP_XC7myySJCVge4_U94pMSZQIlLZXucuaxpFlX0Bm7vQQxpy5sZkeFPGvR9pR7HVFL5oILy5FQv_zCGMmDujuBbyWzi7sQ%3D%3D";
+
+    // 每隔 X 分钟刷新 iframe（例如 10 分钟 = 600000 毫秒）
+    const refreshInterval = 600000; // 10分钟
+    setInterval(() => {
+      iframe.src = baseUrl + "&nocache=" + Date.now(); // 加时间戳避免缓存
+    }, refreshInterval);
+  </script>
+
 </body>
 
 </html>
+
 
 
 
